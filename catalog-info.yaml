@@ -4,8 +4,9 @@ metadata:
   name: "track-service"
   description: "Service for everything related to tracks"
   annotations:
-    github.com/project-slug: spotify-portal-public-demo/track-service
     backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: spotify-portal-public-demo/track-service
+    sonarqube.org/project-key: spotify-portal-public-demo_track-service
 spec:
   type: service
   lifecycle: experimental
