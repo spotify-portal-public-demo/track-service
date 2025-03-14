@@ -7,6 +7,9 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: spotify-portal-public-demo/track-service
     sonarqube.org/project-key: spotify-portal-public-demo_track-service
+    backstage.io/kubernetes-id: track-service
+    backstage.io/kubernetes-namespace: music-system
+    backstage.io/kubernetes-label-selector: "app=track-service"
 spec:
   type: service
   lifecycle: experimental
