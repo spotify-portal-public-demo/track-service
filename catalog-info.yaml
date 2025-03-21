@@ -5,6 +5,7 @@ metadata:
   description: "gRPC service for tracks"
   annotations:
     github.com/project-slug: spotify-portal-public-demo/track-service
+    sonarqube.org/project-key: spotify-portal-public-demo_track-service
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
