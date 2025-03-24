@@ -1,0 +1,8 @@
+site_name: "track-service"
+site_description: "gRPC service for tracks"
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core
