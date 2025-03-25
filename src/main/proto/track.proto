@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.spotify.demo.track.proto";
+option java_outer_classname = "TrackProto";
+
+service TrackService {
+  rpc GetTracks (GetTracksRequest) returns (GetTracksResponse) {}
+  rpc AddTracks (AddTracksRequest) returns (AddTracksResponse) {}
+  rpc RemoveTracks (RemoveTracksRequest) returns (RemoveTracksResponse) {}
+}
+
+message GetTracksRequest {
+  repeated string ids = 1;
+  repeated string isrcs = 2;
+  repeated string titles = 3;
+  repeated string album_ids = 4;
+  repeated string artist_ids = 5;
+}
+
+// should be paginated
+message GetTracksResponse {
+  repeated Track tracks = 1;
+}
+
+message AddTracksRequest {
+  repeated Track tracks = 1;
+}
+
+message AddTracksResponse {}
+
+message RemoveTracksRequest {
+  repeated string ids = 1;
+}
+
+message RemoveTracksResponse {}
+
+message Track {
+  string id = 1;
+  string isrc = 2;
+  string title = 3;
+  int32 duration = 4;
+  string album_id = 6;
+  repeated string artist_ids = 5;
+}
