@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: track-service
+  description: "gRPC service for tracks"
+  tags:
+    - java
+    - grpc
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: spotify-portal-public-demo/track-service
+    sonarqube.org/project-key: spotify-portal-public-demo_track-service
+    grafana/dashboard-selector: track-service
+    backstage.io/kubernetes-id: track-service
+    backstage.io/kubernetes-namespace: track-service
+    backstage.io/kubernetes-label-selector: app=track-service
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/content"
+  system: "system:default/metadata"
