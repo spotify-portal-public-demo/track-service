@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.spotify.demo.track.proto";
+option java_outer_classname = "TrackProto";
+
+service TrackService {
+  rpc GetTracks (GetTracksRequest) returns (GetTracksResponse) {}
+  rpc AddTracks (AddTracksRequest) returns (AddTracksResponse) {}
+  rpc RemoveTracks (RemoveTracksRequest) returns (RemoveTracksResponse) {}
+}
+
+message GetTracksRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+
+  // allow looking up tracks by one or more fields - if left blank will return all tracks
+  repeated string ids = 3;
+  repeated string isrcs = 4;
+  repeated string titles = 5;
+  repeated string album_ids = 6;
+  repeated string artist_ids = 7;
+
+}
+
+message GetTracksResponse {
+  string next_page_token = 1;
+  repeated Track tracks = 2;
+}
+
+message AddTracksRequest {
+  repeated Track tracks = 1;
+}
+
+message AddTracksResponse {}
+
+message RemoveTracksRequest {
+  repeated string ids = 1;
+}
+
+message RemoveTracksResponse {}
+
+message Track {
+  string id = 1;
+  string isrc = 2;
+  string title = 3;
+  int32 duration = 4;
+  string album_id = 6;
+  repeated string artist_ids = 5;
+}
