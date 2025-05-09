@@ -34,3 +34,5 @@ spec:
   system: "system:default/metadata"
   providesApis:
     - track-service-grpc
+  dependsOn:
+    - resource:track-service-db
