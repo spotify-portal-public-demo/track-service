@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: track-service
-          image: ghcr.io/spotify-portal-public-demo/track-service:main-6ff4828d-1746787182 # {"$imagepolicy": "flux-system:track-service"}
+          image: ghcr.io/spotify-portal-public-demo/track-service:main-4644d009-1746791199 # {"$imagepolicy": "flux-system:track-service"}
           imagePullPolicy: Always
           resources:
             requests:
