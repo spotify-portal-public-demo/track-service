@@ -23,12 +23,13 @@ metadata:
     github.com/project-slug: spotify-portal-public-demo/track-service
     sonarqube.org/project-key: spotify-portal-public-demo_track-service
     grafana/dashboard-selector: track-service
+    grafana/alert-label-selector: service_name=track-service
     backstage.io/kubernetes-id: track-service
     backstage.io/kubernetes-namespace: track-service
     backstage.io/kubernetes-label-selector: app=track-service
 spec:
   type: service
-  lifecycle: experimental
+  lifecycle: production
   owner: "group:default/content"
   system: "system:default/metadata"
   providesApis:
